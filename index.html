@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WebCalc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nayeemur Rahman">
+    <meta name="description" content="This is a calculator made using HTML, CSS and JavaScript">
+    <link rel="shortcut icon" href="images/ico.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calc">
+        <h1> WebCalc </h1>
+        <form name="calc">
+            <input type="text" id="display" name="display">  </input>
+            <br>
+            <table>
+                <tr>
+                    <td><input type="button" value="(" class="button" onclick="calc.display.value+='('"> </input></td>
+                    <td><input type="button" value=")" class="button" onclick="calc.display.value+=')'"> </input></td>
+                    <td><input type="button" value="^" class="button" onclick="calc.display.value+='**'"> </input></td>
+                    <td><input type="button" value="AC" class="button" onclick="calc.display.value=''"> </input></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" class="button" onclick="calc.display.value+='7'"></input></td>
+                    <td><input type="button" value="8" class="button" onclick="calc.display.value+='8'"> </input></td>
+                    <td><input type="button" value="9" class="button" onclick="calc.display.value+='9'"> </input></td>
+                    <td><input type="button" value="÷" class="button" onclick="calc.display.value+='/'"> </input></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" class="button" onclick="calc.display.value+='4'"> </input></td>
+                    <td><input type="button" value="5" class="button" onclick="calc.display.value+='5'"> </input></td>
+                    <td><input type="button" value="6" class="button" onclick="calc.display.value+='6'"> </input></td>
+                    <td><input type="button" value="×" class="button" onclick="calc.display.value+='*'"> </input></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" class="button" onclick="calc.display.value+='1'"> </input></td>
+                    <td><input type="button" value="2" class="button" onclick="calc.display.value+='2'"> </input></td>
+                    <td><input type="button" value="3" class="button" onclick="calc.display.value+='3'"> </input></td>
+                    <td><input type="button" value="-" class="button" onclick="calc.display.value+='-'"> </input></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" class="button" onclick="calc.display.value+='0'"> </input></td>
+                    <td><input type="button" value="." class="button" onclick="calc.display.value+='.'"> </input></td>
+                    <td><input type="button" value="=" class="button" onclick="calc.display.value=eval(calc.display.value)"> </input></td>
+                    <td><input type="button" value="+" class="button" onclick="calc.display.value+='+'"> </input></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function h() {
+            if (window.screen.width * window.devicePixelRatio > window.screen.height * window.devicePixelRatio){
+                document.getElementById("display").style.height = "45px";
+            }
+            else{
+                document.getElementById("display").style.height = "60px";
+            }
+        }
+        h();
+    </script>
+    <footer>
+        <marquee behavior="scroll" direction="left"><p>© Nayeemur Rahman 2020</p></marquee>
+    </footer>
+</body>
+</html>
